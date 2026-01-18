@@ -73,7 +73,7 @@ As principais informações disponíveis são: <br>
 ### Dataviz do Projeto
 Segue solução proposta, com as respostas solicitadas para a área de negócio.
 
-![Dataviz solução projeto contabil]()
+![Dataviz solução projeto contabil](files/dashboard.PNG)
 
 [End]
 
