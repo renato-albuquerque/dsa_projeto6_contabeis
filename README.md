@@ -32,9 +32,43 @@ Desenvolvimento de solução (Dashboard dinâmico) de `Balanço Patrimonial (BP)
 
 ### Sobre o Dataset
 
+#### Aba PlanoContas
+Contém informações contábeis estruturadas em níveis hierárquicos de contas, com foco na organização e análise de demonstrações financeiras. Ele é composto por 12 registros e 6 colunas, representando a estrutura de contas contábeis utilizada em relatórios financeiros. <br>
+
+As principais informações disponíveis são: <br>
+- Identificação da conta: código único para cada conta contábil.
+- Tipo de relatório: classificação do demonstrativo contábil (ex.: Balanço Patrimonial).
+- Hierarquia contábil: estrutura das contas dividida em níveis (Nível 1 ao Nível 4), permitindo detalhamento progressivo das contas.
+
+#### Aba DadosContabeis
+Contém informações referentes aos valores contábeis registrados por conta e por período, com foco na análise e consolidação de dados financeiros ao longo do tempo. Ele é composto por registros de movimentações contábeis, associados às contas definidas no plano de contas. <br>
+
+As principais informações disponíveis são: <br>
+
+- Identificação da conta: código da conta contábil utilizado para relacionar os valores ao plano de contas.
+- Tipo de relatório: classificação do demonstrativo contábil ao qual o valor está associado (ex.: Balanço Patrimonial).
+- Período/Data: data ou período de referência do registro contábil.
+- Valor contábil: montante financeiro registrado para a conta no período informado.
 
 ### Dicionário de Dados
 
+#### 📑 Aba: PlanoContas
+| Coluna            | Descrição                                                      | Tipo    |
+| ----------------- | -------------------------------------------------------------- | ------- |
+| **ContaID**       | Identificador único da conta contábil                          | Inteiro |
+| **TipoRelatorio** | Tipo de demonstrativo contábil (ex.: Balanço Patrimonial, DRE) | Texto   |
+| **Nivel_1**       | Classificação contábil de nível mais agregado                  | Texto   |
+| **Nivel_2**       | Subclassificação do nível 1                                    | Texto   |
+| **Nivel_3**       | Subclassificação do nível 2                                    | Texto   |
+| **Nivel_4**       | Conta contábil detalhada                                       | Texto   |
+
+#### 📑 Aba: DadosContabeis
+| Coluna            | Descrição                                                      | Tipo     |
+| ----------------- | -------------------------------------------------------------- | -------- |
+| **ContaID**       | Identificador da conta contábil (chave para o Plano de Contas) | Inteiro  |
+| **Data**          | Data ou período de referência do registro contábil             | Data     |
+| **Valor**         | Valor contábil registrado no período                           | Numérico |
+| **TipoRelatorio** | Tipo de demonstrativo contábil associado                       | Texto    |
 
 ### Dataviz do Projeto
 Segue solução proposta, com as respostas solicitadas para a área de negócio.
